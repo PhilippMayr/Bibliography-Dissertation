@@ -10,3 +10,7 @@ The evaluation of the cross-concordances (82 topics altogether) shows that the r
 
 
 Keywords: Bradfordizing, cross-concordances, heterogeneous indexed databases, Information Retrieval, re-ranking, core journals, evaluation, relevance, digital libraries, bibliographic databases, journal articles, monographs
+
+## License
+
+The bibliography (all `.bib` files) can be used freely as public domain (CC Zero).
