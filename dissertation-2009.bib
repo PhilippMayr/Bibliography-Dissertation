@@ -127,118 +127,6 @@ year = {2001}
 }
 @book{Binder2002,
 address = {Bonn},
-annote = {1 Zielstellung des Projekts 4
-2 Erstellung von Test-Datenbanken 5
-2.1 Sozialwissenschaften 5
-2.2 Mathematik 7
-3 Planung und Ablauf des Vorhabens 8
-4 Entwicklung der relevanten wissenschaftlichen und
-technischen Bereiche w{\"{a}}hrend der Projektlaufzeit 8
-5 Erzielte Ergebnisse 10
-5.1 Analyse der vorhandenen Heterogenit{\"{a}}t 10
-5.1.1 Sozialwissenschaften 10
-5.1.2 Mathematik 12
-5.2 Metadaten-Extraktion 13
-5.2.1 Heuristiken 13
-5.2.1.1 Sozialwissenschaften 13
-5.2.1.2 Mathematik 16
-5.2.2 Implementierung 18
-5.2.2.1 Sozialwissenschaften/HTML 18
-5.2.2.2 Mathematik/Postscript 20
-5.2.3 Einsatz der Extraktionswerkzeuge in der Gatherer-
-Komponente aus CAP7 23
-5.2.4 Ergebnisse/Tests 24
-5.2.4.1 Sozialwissenschaften 24
-5.2.4.2 Mathematik 33
-5.3 Statistisch erzeugte Transferbeziehungen 34
-5.3.1 Evaluierung von Term-Term-Beziehungen mit JESTER 34
-5.3.2 Erstellung der Doppelkorpora und Tranferbeziehungen 36
-5.3.2.1 Sozialwissenschaften 36
-5.3.2.2 Mathematik 39
-5.3.2.3 Abstimmung von CAP9 und CAP11 40
-5.3.3 Ergebnisse/Tests 42
-5.3.3.1 Sozialwissenschaften 42
-5.4 Transfer-Service 54
-5.4.1 Transfer-Architektur 54
-5.4.1.1 Anbindung an die Retrievalkomponente 61
-5.4.1.2 Einbindung von Transferbeziehungen 63
-5.4.1.3 Einbindung von Crosskonkordanzen 64
-6 Verwertbarkeit der Ergebnisse 66
-7 Fazit 68
-8 Ver{\"{o}}ffentlichungen 70
-
-CARMEN AP11
-
-1. Zielstellung
-S. 4,5
-• Erzeugen fehlender Metadaten aus Dokumenten
-• Heterogenit{\"{a}}tsbehandlung mithilfe von statistisch-quantitativen Methoden
-• Einbau der intellektuell entwickelten Crosskonkordanzen
-
-S. 5 Sowi Beispielkorpus mit 3661 Internetquellen Themenbereiche des GIRT-Scopes, d.h. auf die Themen „Frauenforschung“, „Migration“ und „Industrie- und Betriebssoziologie“ eingeschr{\"{a}}nkt.
-
-S. 7 Math. Beispielkorpus 400 PS-Preprints
-
-4. Entwicklung der relevanten Bereiche
-
-3 Forschungsbereiche:
-S. 8 
-• Behandlung semantischer Heterogenit{\"{a}}t mittels quantitativ-statistischer Verfahren (probabilistische Verfahren und neuronale Netze)
-• automatische Generierung von Metadaten
-• Thesaurus-Management-Systeme zur Verwaltung von intellektuell erstellten Crosskonkordanzen
-
-5.3 Statistisch erzeugte Transferbeziehungen
-
-Jester: Java Environment for Statistical Transfers
-
-S- 35, 36 Als Ma{\ss} f{\"{u}}r den statistischen Zusammenhang zweier Terme wird die „bedingte Wahrscheinlichkeit“, mit der zwei Terme gemeinsam auftreten, berechnet. F{\"{u}}r einen Deskriptor a bestimmt P(a) die Wahrscheinlichkeit, dass a einem Dokument zugeordnet ist. Sie l{\"{a}}sst sich ermitteln, indem die Zahl der Dokumente, in denen a auftritt durch die Gesamtzahl der Dokumente geteilt wird. P(a /$\backslash$ b) bezeichnet die Wahrscheinlichkeit, dass zwei Terme a und b gemeinsam auftreten. Ist das Auftreten der beiden Terme unabh{\"{a}}ngig voneinander, so sollte in etwa P(a /$\backslash$ b) = P(a)* P(b) gelten. Weichen diese Werte erheblich voneinander ab, so liegt ein systematischer Zusammenhang zwischen den Termen vor. Treten sie h{\"{a}}ufiger gemeinsam auf, als vorhergesagt, so sind sie wahrscheinlich nah verwandt. Treten sie deutlich seltener gemeinsam auf, so liegt nahe, dass sie eine gegens{\"{a}}tzliche Beziehung haben und einander ausschlie{\ss}en. 
-Anstatt nur diese symmetrische Beziehung zu betrachten, die bei geeigneter Wahl eines Schwellwertes die Ermittlung von Termpaaren erlaubt, die quasi Synonym verwendet werden, kann auch die gerichtete bedingte Wahrscheinlichkeit betrachtet werden. Hier wird nur betrachtet, wie wahrscheinlich es ist, dass, wenn Deskriptor a vergeben wurde, ebenfalls Deskriptor b auftritt. P(a) / P(a /$\backslash$ b) beschreibt diesen Zusammenhang. Je gr{\"{o}}{\ss}er dieser Wert ist, um so h{\"{o}}her ist die gerichtete Abh{\"{a}}ngigkeit, die z.B. auftritt, falls a semantisch ein Unterbegriff von b ist.
-
-S. 38 Deskriptor aus dem Thesaurus als Anfrage gegen den Carmen-Testkorpus zu betrachten. Als Retrievalmaschine wurde die Volltextsuchmaschine Fulcrum SearchServer 3.7 verwendet, die die Dokumente im Korpus nach ihrer {\"{A}}hnlichkeit zum Anfragevektor (Rankingwert) absteigend sortiert. Jedes Dokument in der Ergebnismenge, dessen Rankingwert einen bestimmten Schwellwert {\"{u}}berschreitet, wurde mit dem Ausgangsterm indexiert. Die Deskriptor-Dokument-Relation wurde mit dem Rankingwert gewichtet.
-
-S. 38 Da dieses Vorgehen jedoch nicht die Relevanz eines Deskriptors f{\"{u}}r das jeweils gefundene Dokument ber{\"{u}}cksichtigt, sondern nur das Vorkommen des Terms im Dokument, wurden die Anfragevektoren jeweils um thematische Kontextinformationen erweitert. Dieses Verfahren soll sicherstellen, dass Dokumente nur mit den Deskriptoren indexiert werden, mit denen das Dokument inhaltlich wohl-beschrieben ist.
-
-Zu diesem Zweck wurde ein weiterer Parallelkorpus mit SOLIS-Dokumenten aufgebaut, die thematisch zum Carmen-Korpus passen. Die SOLISDokumente sind mit Deskriptoren aus dem IZ-Thesaurus indexiert. Thematische Kontextinformationen zu jedem IZ-Deskriptor wurde durch eine Co-Word-Analyse der den SOLIS-Dokumenten zugeordneten Deskriptoren gewonnen. Dabei wurden die Co-Word-Relationen einer Jester-Analyse unterzogen und der initiale Anfragevektor (mit dem Ausgangsterm) um die Co-Begriffe des Ausgangsterms angereichert, die sich auch in der von Jester produzierten Term-Term-Matrix wiederfanden. F{\"{u}}r die Gewichtung der Relationen wurde der {\"{A}}quivalenzindex herangezogen.
-Mit den um solche Zusatzterme erweiterten Anfragevektoren wurde nun im FULCRUM-indexierten Carmen-Korpus gesucht. Als Retrievalmaschine wurde das FULCRUM-Vektorraummodell verwendet. Die gefundenen Dokumente wurden, soweit deren Rankingwert einen bestimmten Schwellwert nicht unterschritt, mit dem Ausgangsterm indexiert. Als Gewichtung wurde der Rankingwert des Dokuments bez{\"{u}}glich der Anfrage genommen (siehe Abbildung 7).
-
-!!! Die Volltextterme des Carmen-Korpus wurden mit Hilfe eines Stringtokenizers gewonnen und mittels eines Stemmingverfahrens normalisiert. Um das (sehr umfangreiche) Wortmaterial aus den Volltexten auf sinnvolle Terme zu reduzieren, wurden nur Terme ber{\"{u}}cksichtigt, die auch im IZ-Thesaurus (deutsch und englich) sowie in der Liste der „freien“ Deskriptoren des IZ vorkommen.
-
-??? nur Deskriptoren aus Thesaurus oder alle Terme (inkl. Nichtdeskriptoren?)
-??? K{\"{o}}nnte man da nicht auch schon daraus ranken?
-
-5.3.3. Ergebnisse
-
-S. 42 Gegenstand dieses Tests war die Frage, ob die Einbeziehung zus{\"{a}}tzlicher Transferbegriffe in die Freitextrecherche einen Zuwachs an relevanten Dokumenten erbringt.
-
-In einem ersten Schritt wurde eine einfache Suche mit einem Ausgangssuchbegriff (z.B. Dominanz) aus der dom{\"{a}}nspezifischen Termliste (Ausgangsterme der statistisch erstellten Term-Term-Matrix) durchgef{\"{u}}hrt. Die Ergebnisliste enth{\"{a}}lt Dateinamen von Dokumenten ausschlie{\ss}lich aus dem Carmen-Corpus. Der Suchbegriff wurde nicht trunciert. Die gefundenen Treffer wurden ex definitione als „relevant“ klassifiiert, da sie zumindest einmal den Suchbegriff (in der Stammform) im Text enthalten. In einem zweiten Schritt wurde die Suche um die in der Term-Term-Matrix enthaltenen Transferbegriffe (nicht trunciert) erweitert. Diese erweiterte Suche enthielt in jedem Fall auch den Ausgangssuchbegriff (vgl. Kap. 5.4.1).
-
-Alle bei der erweiterten Suche zus{\"{a}}tzlich gefundenen Dokumente wurden in jedem Einzelfall aufgerufen und auf ihre inhaltliche Relevanz {\"{u}}berpr{\"{u}}ft. Ein Dokument wurde als relevant eingestuft, wenn es inhaltlich einen Zusammenhang mit demjenigen Sachverhalt aufweist, der mit dem Ausgangssuchbegriff angesprochen ist.
-S. 43 Ergebnisdarstellung Evaluation
-
-bei der einfachen Suche
-• Zahl der gefundenen relevanten Treffer
-bei der erweiterten Suche:
-• Zahl der Treffer insgesamt (ohne Dubletten)
-• Zahl der zus{\"{a}}tzlichen Treffer im Vergleich zur einfachen Suche (ohne Dubletten)
-• Zahl der relevanten Treffer (alle Treffer aus der einfachen Suche und zus{\"{a}}tzliche als relevant eingestufte Treffer aus der erweiterten Suche)
-• Zahl der zus{\"{a}}tzlichen relevanten Treffer (relevante Treffer aus der erweiterten Suche, die in der einfachen Suche nicht enthalten waren)
-• Anteil der zus{\"{a}}tzlichen relevanten Treffer an den zus{\"{a}}tzlichen Treffern (Prozentanteil der in der erweiterten Suche zus{\"{a}}tzlich gefundenen relevanten Treffer an der Gesamtzahl der in der erweiterten Suche gefundenen Treffer)
-• Aufz{\"{a}}hlung der bei der Relevanzpr{\"{u}}fung eingesetzten (intellektuell vergebenen) Suchbegriffe
-bei den Transferbegriffen:
-• Nennung der Transferbegriffe (damit: Zahl der Transferbegriffe pro Ausgangsbegriff)
-• H{\"{a}}ufigkeit des Vorkommens in der jeweiligen Dom{\"{a}}ne (ohne Dubletten)
-• Zahl der durch jeden Transferbegriff (einzeln oder in Kombination mit anderen Transferbegriffen) erzielten zus{\"{a}}tzlichen Treffer
-• Zahl der durch jeden Transferbegriff (einzeln oder in Kombination mit anderen Transferbegriffen) erzielten zus{\"{a}}tzlichen relevanten Treffer
-
-S. 44-52 Anzeigen der Ergebnisse 
-??? besonders interessant sind die Transferbegriffe, von denen recht viele semantisch nicht sehr viel mit dem Ausgangsbegriff zu tun haben
-??? ich w{\"{u}}rde vermuten, da{\ss} das einerseits am training corpus lag (nur Begriffe aus Thesaurus im Volltext, so da{\ss} nicht gen{\"{u}}gend Synonyme und Querverweise im Ausgangsvolltextvokabular mehr enthalten waren)
-??? gr{\"{o}}{\ss}eres Problem ist, da{\ss} diese Transferbegriffe nur auf diesen Korpus passen, sprich es wurde zu „eng“ trainiert – es gibt keine Allgemeing{\"{u}}ltigkeit f{\"{u}}r diese Transfers f{\"{u}}r einem gr{\"{o}}{\ss}eren Korpus
-
-S. 54 Zusammenfassend kann man festhalten, dass 2 der 6 Recherchen mit der durch die Transferbegriffe erweiterten Suche ein positives Resultat erbringen. Eine weitere Recherche („Frauenhaus“) liefert ein zumindest akzeptables Resultat, vor allem im Hinblick auf den (von der einfachen Suche aus gesehen) relativ hohen Zuwachs an relevanten Treffern (von 5 auf 9). Allerdings sind nur 4 der 12 zus{\"{a}}tzlichen Treffer relevant. Die restlichen 3 Recherchen erbringen unbefriedigende Ergebnisse. Allerdings m{\"{u}}ssen bei der Beurteilung der beiden Recherche-Ergebnisse in der Dom{\"{a}}ne „Migration“ die Restriktionen im Carmen-Testkorpus ber{\"{u}}cksichtigt werden. In dieser Dom{\"{a}}ne sollten bei zuk{\"{u}}nftigen Tests andere bzw. zus{\"{a}}tzliche Dokumente aus anderen Internetquellen bereitgestellt werden.
-
-5.4 Transfer-Service 
-??? das ist ganz {\"{a}}hnlich wie der Heterogenit{\"{a}}tsservice, ist aber weitergehend, indem es versucht wird, ins retrieval einzubauen},
 author = {Binder, Gisbert and Marx, Jutta and Mutschke, Peter and Riege, Udo and Str{\"{o}}tgen, Robert and Kokkelink, Stefan and Pl{\"{u}}mer, Judith},
 booktitle = {IZ-Arbeitsbericht; Nr. 24},
 pages = {71},
@@ -277,85 +165,6 @@ year = {2001}
 @book{Blair1990,
 abstract = {(David C.) D.C. Blair. ill. ; 25 cm. Includes index.},
 address = {Amsterdam ; New York},
-annote = {The central task of information Retrieval research is to understand how documents should be represented for effective retrieval. This is primarily a problem of language and menaing. Any theory of document representation, and by consequence, any theory of Information Retrieval, must be based on a clear thoery of language and meaning. p. vii-vii.
-
-Data retrieval vs. Document retrieval:
-DataR:
-- direct retrieval that answers the Inquirer's question: Typical query is specific ("I want to know X").
-- Necessary relationship between a well-constructed request and the correct answer (hence, data retrieval systems are deterministic).
-- Speed of retrieval is dependent primarily on the physical access speed of the system being used.
-- Criterion of successful retrieval: correctness of the answer (Evaluation is objective: Does the system answer the Inquirer's question correctly?).
-DocumentR:
-- Indirect retrieval that provides or refers to a set of documents which will likely contain what the Inquirer wants: Typical query is general or topical ("I want to know about X").
-- Probabilistic relationship between a well-constructed request and a satisfactory answer (hence, document retrieval systems are non-deterministic).
-- Speed of retrieval is dependent primarily on the number of logical decisions which the Inquirer must make in the course of a search, and only secondarily dependent on the physical searching speed of the system.
-- Criterion of successful retrieval: Utility (Evaluation is subjective: Does the system satisfy the Inquirer's need?). p. 7
-
-The principal difficulty which confronts an inquirer using an ir system is predicting, by means of a formal search query, the words or phrases that have been used to represent (index) the document or documents in the system with which he would be satisfied. 
-The number of documents in a retrieved set which includes the desired documents should be smaller than the searcher's "futility point." This futility point is the maximum number of retrieved documents the inquirer is willing to browse through. But there is another kind of futility point - what might be called the "anticipated futility point." This point is the maximum number of retrieved documents that an inquirer would be willing to begin browsing through. p. 9
-
-But the expansion of the number of possible search terms an inquirer has available for constructing formal search queries does not, in itself, improve the inquirer's chances of successfully retrieving useful documents. In fact, it may make things worse. This is because a modest increase in the number of related search terms which the inquirer has at his disposal dramatically expands the number of possible search queries the inquirer might be able to formulate using them. p. 20
-
-But because of the combinatoric nature of the indeterminacy problem, as document collections grow in size the indeterminacy problem in the representation of documents grows also. p. 23
-
-Full-text indexing: This increase in information manifests itself in two major ways: a single search term used on a full-text system will likely retrieve significantly more documents than the same term used to retrieve documents from a more conventional system with more selective indexing (assuming the same data base for both systems); and, the number of different terms in the search (or index) vocabulary of a full-text system will be significantly larger than the number of different terms in the vocabulary of a more conventional system. The major consequence of full-text search terms retrieving more documents than terms on a conventional system is that they will also retrieve more non-relevant or useless documents per search than a conventional system. p. 51
-
-It is a well known fact that man's powers or recall are much less robust than his powers of recognition. p. 53
-
-Physical access is concerned with the techniques of retrieving and presenting information, while logical access is concerned with determining which information (or kind of information) is relevant to a particular question. For this reason, the problems of logical access must be resolved before addressing the problems of physical access. p. 70
-
-Cooper's idea was that what the inquirer seeks is satisfaction in his search for documents. An inquirer will retrieve documents until he is satisfied with those that he has. To search any more, Cooper argued, would be pointless, and the fact that there may be more documents on the data base which the inquirer would prefer to those he actually retrieved, is irrelevant (following Herb Simon, we might call this the "satisfycing" criterion of retrieval). p. 74-75
-
-Here a quantitative increase in the size of the document collection causes a qualitative change in the way that retrieval must then be performed. p. 81
-
-Stated succinctly, it is impossibly difficult for users to predict the exact words, word combinations, and phrases that are used by all (or most) relevant documents and only (or primarily) by those documents, as can be seen in the following examples. p. 101
-
-Now, from a purely formal point of view we can speak of Semiotics as dealing with three terms: the signifier (expression), the signified (content), and the sign (a signifier and signified united by the process of signification). p. 126-127
-
-Thus Semiotics finds its primary activity as the restructuring or explication of already existent systems of signification. p. 127-128
-
-The orientation of this investigation is that pragmatics is the fundamental ordering principle of meaning / signification and that questions of syntax and semantics (if they are address at all) are derivative from pragmatics. p. 136
-
-Unlimited semiosis (from C.S. Peirce): there can never be a necessary and sufficient explanation or description of the meaning of a sign/ expression. In the sense of meaning which we have developed here, this means that there can never be a complete description of the kinds of allowable uses that can be made of a given expression. p. 137
-
-But the ambiguity in language is a direct result of the level of ambiguity in the activity in which the language in question is used. Ambiguity in language is not independent of usage. It is ambiguity of application. The point here is that much ambiguity can be lessened by an appeal to how expressions are used. p. 140
-
-Here Wittgenstein admonishes us not to assume that the uniformity of a word's appearance in different contexts indicates a uniformity of meaning. Instead, he suggests that we look and see whether the words are used in the same way each time. p. 144
-
-We learn new words by means of what Wittgenstein calls "language games". These language games provide a kind of framework or grammar in which the examples of how a word is used will "make sense." In other words, the role of a word (or its conventional usage) can only be understood in the context of some language game which already is known. p. 145
-
-The nature of the activity being pursued influences subject searching in two important ways: in the first place, the language of the activity, its jargon or cant, will determine which words will be used to describe and ask for subjects.[{\ldots}] The other way in which the nature of an activity can influence retrieval is in determining the level of exhaustivity needed for satisfactory retrieval. ' patent searching, defense of a lawsuit, searching to support original research p. 158
-also size of collection p. 162
-
-One of the main themes of this discussion is that the activity of representing (indexing) documents is a linguistic process, subject to the same tendencies and regularities as the processes of natural language. But in our previous discussion of the general propelrties of natural language we noted that linguistic meaning and usage were governed by "unlimited semiosis" - the characteristic that there is no practical or theoretical limit to the number of different ways (words, word combination phrases and sentences) can be used to express the same idea or "meaning." p. 169
-
-The perception that subject descriptions may be imprecise when used to refer to specific information is primarily a consequence of the activity of searching for information on retrieval systems with large document collection.
-Reasons:
-1. Subject descriptions (by themselves) were never meant to be able to clearly distinguish small numbers of useful documents from large numbers of comparatively useless documents. (example of describing a person in a plane / baseball stadium) - that's why we add 'contextual' information (he means formal metadata)
-2. Subject descriptions were never meant to be used outside of the normal interaction and ongoing clarification that characterizes ordinary discussion. They are not objectively verifiable labels for categories like scientific classifications are. p. 172-173
-there is no linguistic interaction with an ir system - "shrug of the shoulders" response 
-
-We should now focus our concern on how to make search term usage (especially subject descriptions) more like their usage in ordinary language. 
-1. In the first place, ir systems should provide an environment in which inquirers can learn more easily how to use document descriptions appropriately.
-2. Second, subject descriptions should be as highly contextualized as possible, and the contextual dimensions should be expanded.
-3. Third, retrieval systems should be designed to encourage communication between inquirers and indexers (or provide feedback to an automatic indexing algorithm). p. 178
-
-how to design ir systems to facilitate this sort of demonstrative learning?
-1. Perspicuous examples of search term usage
-2. The importance of example searches p. 180
-How we should represent documents for retrieval is contingent on answering two more fundamental questions:
-1. how would the inquirers who would find certain specific documents useful ask for them (what words and phrases would they employ to describe what they wanted).
-2. What might the inquires know that they might not thing to use to describe what they want, but would nevertheless be useful for describing documents for retrieval. (more formal metadata like location on a navy ship of to-be-repaired parts) p. 185
-
-As van Rijsbergen states, "The index term vocabulary of a document collection often has a Zipfian distribution, that is, if we count the number of documents in which each index term occurs and plot them according to rank order then we obtain the usual hyperbolic shape". IR, 1975, p. 23 p. 191
-
-Searle: brute facts of language do not constitute meaning, institutional facts of language does
-brute facts: frequencies of word occurrences
-In short, the institutional facts of language are not derivable from the brute facts of language, no matter how detailed and rigorous those statistics might be. Meaning in language is an institutional fact, not a brute fact. Meaning can only be understood within the context of the institution(s) in which language plays a role. p. 210
-
-But we can describe the information retrieval problem more generally as the problem of matching ill-structured requests (with varying levels of indeterminacy in their descriptions) to ill-structured, similarly indeterminate, descriptions of available items or services. pl 319
-
-Having shown the importance of the activity or institutional context for understanding language, we can now see that the ambiguity or indeterminacy of language is unavoidable when it functions outside of the activities or institutions in which it has a role. The language of information retrieval is used largely out of context and, as a result, is inherently ambiguous. The goal of any document indexing strategy should be to build as much of the missing activity or institutional context back into the language of representation. p. 323},
 author = {Blair, D C},
 keywords = {Information retrieval.},
 pages = {xiv, 335},
@@ -499,7 +308,6 @@ title = {{The Anatomy of a Large-Scale Hypertextual Web Search Engine}},
 year = {1998}
 }
 @article{Brody2004,
-annote = {Language: eng},
 author = {Brody, T. and Harnad, S},
 journal = {ECS EPrints Repository},
 keywords = {open{\_}access,repositories},
@@ -691,11 +499,6 @@ volume = {38},
 year = {2004}
 }
 @article{Dempsey2006,
-annote = {further development of the catalog
-catalog sits awkwardly in the array of available resources
-... multiple discovery environments
-"Historically, access to the journal literature was a two-stage process. A user looked in one set of tools - abstracting and indexing services - to discover what was potentially of interest at the article level. Then they would have journal level access to the catalogue to check whether the library held the relevant issue. To caricature Adorno, these two steps represented the torn halves of an integral whole to which they did not add up. Resolution services aim to make that integral whole, to connect the discovery and location experiences seamlessly."
-Multiple Discovery Experiences ... "As we work to aggregate supply (either through consolidation of data or of services) so we must work to place these resources where they will best meet user needs. In this process, discovery of the catalogued collection will be increasingly disembedded, or lifted out, from the ILS system, and re-embedded in a variety of other contexts -- and potentially changed in the process. And, of course, those contexts themselves are evolving in a network environment."},
 author = {Dempsey, Lorcan},
 journal = {Ariadne},
 number = {48},
@@ -714,7 +517,6 @@ title = {{vascoda.de and the system of the German virtual subject libraries}},
 year = {2007}
 }
 @article{Ding2000,
-annote = {via Wolfram},
 author = {Ding, Ying and Chowdhury, Gobinda G and Foo, Schubert and Qian, Weizhong},
 journal = {JASIS},
 number = {13},
@@ -741,8 +543,6 @@ title = {{Semantic interoperability : Theoretical Considerations}},
 year = {2004}
 }
 @article{Efthimiadis1996,
-annote = {online search: 1) initial query formulation and 2) query reformulation
-query expansion is the process of supplementing the original query with additional terms},
 author = {Efthimiadis, Efthimis N},
 editor = {Williams, Martha},
 journal = {Annual Review of Information Systems and Technology (ARIST)},
@@ -903,7 +703,6 @@ year = {1999}
 }
 @article{Ginsparg,
 abstract = {The technological transformation of scholarly communication infrastructure began in earnest by the mid-1990s. Its effects are ubiquitous in the daily activities of typical researchers, instructors and students, permitting discovery, access to, and reuse of material with an ease and rapidity difficult to anticipate as little as a decade ago. An instructor preparing for lecture, for example, undertakes a simple web search for up-to-date information in some technical area and finds not only a wealth of freely available, peer reviewed articles from scholarly publishers, but also background and pedagogic material provided by its authors, together with slides used by authors to present the material, perhaps video of a seminar or colloquium on the material, related software, on-line animations illustrating relevant concepts, explanatory discussions on blog sites, and often useful notes posted by 3rd party instructors of similar recent or ongoing courses at other institutions. Any and all of these can be adapted for use during lecture, added to a course website for student use prior to lecture, or as reference material afterwards. Questions or confusions that arise during lecture are either resolved in real time using a network-connected laptop, or deferred until afterwards, but with instructor's clarification propagated instantly via a course website or e-mail. Or such lingering issues are left as an exercise for students to test and hone their own information gathering skills in the current web-based scholarly environment. Some courses formalize the above procedures with a course blog that also permits posting of student writing assignments for commentary by other students and the instructor. Other courses employ wikis so that taking lecture notes becomes a collaborative exercise for students.},
-annote = {The technological transformation of scholarly communication infrastructure began in earnest by the mid-1990s. Its effects are ubiquitous in the daily activities of typical researchers, instructors and students, permitting discovery, access to, and reuse of material with an ease and rapidity difficult to anticipate as little as a decade ago. An instructor preparing for lecture, for example, undertakes a simple web search for up-to-date information in some technical area and finds not only a wealth of freely available, peer reviewed articles from scholarly publishers, but also background and pedagogic material provided by its authors, together with slides used by authors to present the material, perhaps video of a seminar or colloquium on the material, related software, on-line animations illustrating relevant concepts, explanatory discussions on blog sites, and often useful notes posted by 3rd party instructors of similar recent or ongoing courses at other institutions. Any and all of these can be adapted for use during lecture, added to a course website for student use prior to lecture, or as reference material afterwards. Questions or confusions that arise during lecture are either resolved in real time using a network-connected laptop, or deferred until afterwards, but with instructor's clarification propagated instantly via a course website or e-mail. Or such lingering issues are left as an exercise for students to test and hone their own information gathering skills in the current web-based scholarly environment. Some courses formalize the above procedures with a course blog that also permits posting of student writing assignments for commentary by other students and the instructor. Other courses employ wikis so that taking lecture notes becomes a collaborative exercise for students.},
 author = {Ginsparg, P},
 journal = {CTWatch Quarterly,},
 keywords = {Acceso abierto Gestores de referencias sociales Es},
@@ -919,8 +718,6 @@ year = {2003}
 }
 @article{Godby2004,
 abstract = {This paper proposes a model for metadata crosswalks that associates three pieces of information: the crosswalk, the source metadata standard, and the target metadata standard, each of which may have a machine-readable encoding and human-readable description. The crosswalks are encoded as METS records that are made available to a repository for processing by search engines, OAI harvesters, and custom-designed Web services. The METS object brings together all of the information required to access and interpret crosswalks and represents a significant improvement over previously available formats. But it raises questions about how best to describe these complex objects and exposes gaps that must eventually be filled in by the digital library community.},
-annote = {Behandlung technischer Het.
-Metadata-Mapping},
 author = {Godby, Carol Jean and Young, Jeffrey A and Childress, Eric},
 journal = {D-Lib Magazine},
 number = {12},
@@ -1058,7 +855,6 @@ year = {2004}
 }
 @book{Hodge2000,
 address = {Washington, D.C.},
-annote = {Taxonomy of Knowledge Organization Sources/Systems},
 author = {Hodge, Gail},
 title = {{Systems of Knowledge Organization for Digital Libraries: Beyond Traditional Authority Files}},
 url = {http://www.clir.org/pubs/reports/pub91/contents.html},
@@ -1306,7 +1102,6 @@ url = {http://www.gesis.org/fileadmin/upload/forschung/publikationen/gesis{\_}re
 year = {2006}
 }
 @article{Krause2003b,
-annote = {sollte urspr{\"{u}}nglich erscheinen in Heft 6/2002},
 author = {Krause, J{\"{u}}rgen and Niggemann, Elisabeth and Schw{\"{a}}nzl, Roland},
 journal = {ZfBB: Zeitschrift f{\"{u}}r Bibliothekswesen und Bibliographie},
 number = {1},
@@ -1343,10 +1138,6 @@ year = {2007}
 }
 @book{Lancaster1972,
 address = {Washington, D.C.},
-annote = {Chapter 18 Compatibility and convertibility of Vocabularies
-S. 163
-
-Chap. 3 The classification scheme in vokabulary control},
 author = {Lancaster, F W},
 pages = {233},
 publisher = {Information Resources Press},
@@ -1476,27 +1267,6 @@ year = {1989}
 }
 @article{Lossau2004,
 abstract = {With the development of the World Wide Web, the "information search" has grown to be a significant business sector of a global, competitive and commercial market. Powerful players have entered this market, such as commercial internet search engines, information portals, multinational publishers and online content integrators. Will Google, Yahoo or Microsoft be the only portals to global knowledge in 2010? If libraries do not want to become marginalized in a key area of their traditional services, they need to acknowledge the challenges that come with the globalisation of scholarly information, the existence and further growth of the academic internet.},
-annote = {Based on this experience which resulted in a successful service only a few years ago, a new project group at the library looked into the recent development of the academic web and identified a list of limitations that come with current digital library portal systems: 
-* Coverage of data formats, full text search
-Most systems focus solely on the search of metadata (bibliographic fields, keywords, abstracts). The cross-search of full text has only recently been introduced and is often restricted to a very limited range of data formats (primarily "html" and "txt").
-* Coverage of content types
-Current digital library systems integrate predominantly online library catalogues and databases with some full text repositories (e.g. e-journals). Freely available academic online content as described above is usually not covered by library portals. If they are selected at all they are mainly organised as html-link lists or specific databases (e.g. subject guides) that record reference metadata about web repositories. 
-Beyond online catalogues, databases and e-journals, researchers started to place their pre-prints or post-prints on the websites of faculties and research groups. Comprehensive web servers of scientific congresses include online presentations and papers, large international pre-print servers, often organised by the scientific community, store thousands and hundreds of thousands of documents, and the creation of e-learning objects is gaining increasing popularity.
-* Limited scalability / Information Retrieval performance
-* Search comfort 
-All products follow the principles of traditional Boolean searching which has an impact on the ease of searching. While search engines, based on advanced linguistic analysis and semantic dictionaries, are increasingly integrating algorithms of approximate searching that allow a greater fault tolerance of search terms, traditional Boolean searches require some experience in finding suitable search terms on the part of the user.
-* Presentation of result lists, relevance ranking of single hits
-DL search systems rely on existing bibliographic fields such as author, title, and year of publication to sort their hit lists. The principles still follow, with some modifications, traditional print or card catalogues and are fairly inflexible. Search engines have introduced ranking algorithms that follow both static rules and dynamic live analysis of the result sets offering users a whole range of ranking criteria—one of the very popular features of internet search engines. 
-...
-Beyond standard features of search engine technology, the discussion at Bielefeld University Library, in collaboration with colleagues from other libraries, resulted in a preliminary list of requirements which seem to be essential for implementations in the academic information environment:
-* Indexing of qualified content resources only
-* Handling of data heterogeneity 
-Search and navigation interfaces will need careful research and evaluation in order to confront potential users with a wide range of data formats and content types. Metadata, full text, images, multimedia objects and binary data are the more widely known examples of heterogeneous data, which can be aggregated in one virtual resource. The intelligent mark-up of certain content types for search, search refinement and navigation processes could be one way of dealing with data heterogeneity.
-* Advanced navigation (browsing) functionality
-* Flexible ranking and ordering schemes for result displays
-* Automatic extraction of metadata
-
-** Architecture of next generation search services},
 author = {Lossau, Norbert},
 journal = {D-Lib Magazine},
 number = {6},
@@ -1524,7 +1294,6 @@ year = {2007}
 }
 @book{Marx2005,
 address = {Bonn},
-annote = {2.3 Null-Transformation {\`{a}} in Transformationsarten{\`{a}} Etwas ungl{\"{u}}cklich gew{\"{a}}hlte Bezeichnung f{\"{u}}r zeichengleiche Transformationen / Abbildungen3.2 Automatische Verfahren„Aufgabe einer semantischen Transformation ist es die Anfrage eines Benutzers m{\"{o}}glich exakt von einem Erschlie{\ss}ungssystem in ein anderes zu {\"{u}}bersetzen. Eine semantisch transformierte Anfrage soll also idealiter exakt die selben Dokumente liefern, die der Benutzer mit einer von ihm in der Zielsprache formulierten Anfrage bekommen h{\"{a}}tte.“„Zentral hingegen ist die Frage wie sich die Qualit{\"{a}}t der Transformation im Sinne einer m{\"{o}}glichst exakten Wiedergabe der mit der urspr{\"{u}}nglichen Fragestellung gefunden Dokumente messen l{\"{a}}sst. Zu deren Beantwortung ist es unumg{\"{a}}nglich die Menge derjenigen Dokumente zu bestimmen, die mit einer nicht transformierten Anfrage gefundenen w{\"{u}}rden. Hierzu k{\"{o}}nnen jedoch die schon bei der Berechnung statistischer Transformationen eingesetzten Parallelkorpora herangezogen werden. Ihre Eigenschaft Dokumente mit Termen zweier Sacherschlie{\ss}ungssysteme zu versehen erm{\"{o}}glicht nicht nur einerseits die exakte Bestimmung der Relevanten Dokumente der urspr{\"{u}}nglichen Anfrage (Referenzmenge), sondern auch die eindeutige Bestimmung der mit Hilfe der transformierten Anfrage gefunden Dokumente (Ergebnismenge) andererseits.“{\`{a}} zentraler Hinweis auf Vorgehensweise{\`{a}} also: Parallelkorpus: Dokumente, die mit Deskriptor a aus Thes. A verschlagwortet sind, werden mit den Dokumenten, die mit Deskriptor b aus Thes. B verschlagwortet sind verglichen, wobei a {\`{a}} b die Termtransformation von Thes. A zu Thes. B ist{\`{a}} allerdings wird hier die Qualit{\"{a}}t der Termtransformationen an sich mit der Erweiterung der Ergebnismenge im Retrieval (durch diese Termtransformationen) vermischt. Das ist nat{\"{u}}rlich das letztendliche Ziel, aber trotzdem nicht ganz dasselbe{\`{a}} grunds{\"{a}}tzlich ergibt sich auch ein Problem f{\"{u}}r den Vergleich zwischen Crosskonkordanzen (intellektuell erstellt) und statistischen Transfermethoden:{\`{a}} bei Crosskonkordanzen werden als Termtransformation im Idealfall ein Deskriptor, im Notfall 2-3 Deskriptoren aus B f{\"{u}}r Deskriptor a ausgew{\"{a}}hlt{\`{a}} bei statistischen Verfahren wird eine gerankte Liste von Deskriptoren aus B pr{\"{a}}sentiert, die durch bei einer bestimmten Nummer (meist nach Gewicht bestimmt) abgeschnitten werden{\`{a}} wenn man das Retrieval vergleicht, hat eine Suche (besonders wenn sie nicht Boole ist), wahrscheinlich eine h{\"{o}}here Trefferquote mit mehr Suchtermen {\`{a}} nat{\"{u}}rlich ist die Frage der Relevanz noch eine andere4. Bewertungskriterien{\`{a}} nachgewiesene Dokumente = retrievedS. 9 falsche Erkl{\"{a}}rung f{\"{u}}r Recall, aber nur SchreibfehlerRecall: retrieved {\&} relevant / relevantPrecision: retrieved {\&} relevant / retrievedS. 13 „Clusterverfahren k{\"{o}}nnen auch zur automatischen Generierung von Thesauri verwendet werden – auch wenn sich vortrefflich {\"{u}}ber die Qualit{\"{a}}t solch generierter Thesauri streiten l{\"{a}}sst, soll dies hier nicht thematisiert werden. Ziel dabei ist es Gruppen {\"{a}}hnlicher Begriffe zu finden, welche dann zugeh{\"{o}}rige Thesaurusklassen bilden. Hierzu wird der Vektorraum im Vergleich zur automatischen Klassifikation umgekehrt. Da bei der Betrachtung semantischer Transformationen die Begriffe (Terme) selbst und nicht die Dokumente im Vordergrund stehen, ist diese Umkehrung der Betrachtungsweise auch hier notwendig.“{\`{a}} aber evaluiert wird doch {\"{u}}ber die gefundenen Dokumente? {\`{a}} denn eigentlich:„Dabei wird zu jedem Begriff ein Eigenschaftsvektor, bestehend aus den Dokumenten die diesem Begriff zugeordneten sind, gebildet.“{\`{a}} Begriff = DeskriptorS. 16 „Der Kosinus-Koeffizienten kann also als ein Recall und Precision zusammenfassendes Effizienzma{\ss} angesehen werden. Somit ist er aber auch Konzeptuell von Recall und Precision abh{\"{a}}ngig.“{\`{a}} aber nur hier, weil Gewichtungen, die im Kosinus betrachtet werden, hier Relevanzangaben f{\"{u}}r Dokumente sindS. 21 Abbildung 2: Intellektuelle Kro{\ss}konkordanzen am Korpus USB{\`{a}} was sind die Skaleneinheiten hier? {\`{a}} ich dachte, diese Koeffizienten ergeben ein Ma{\ss}, was genau tr{\"{a}}gt man denn 2-dimensional auf? (oder bin ich hier einfach nur total verwirrt?)S. 25 Abb. 5 {\&} 6 Beispiel einer Recall Verteilung{\`{a}} was ist denn die Skaleneinheit f{\"{u}}r die Y-Achse?5.3.1 Verwendete KorporaUSB Korpus{\`{a}} 16.914 Datens{\"{a}}tze{\`{a}} 3 Jahrg{\"{a}}nge, Monographien und Sammelwerke{\`{a}} SWD / TheSozDDB Korpus{\`{a}} 33.328 Datens{\"{a}}tze5.3.2 Evaluierte TransformationenZur Auswertung konnten folgende Transformationsarten genutzt werden:• Intellektuell (Crosskonkordanzen)o IZ {\`{a}} SWDo SWD {\`{a}} IZ• Statistischo IZ {\`{a}} SWD : Basis USB Korpuso IZ {\`{a}} SWD : Basis DDB Korpuso SWD {\`{a}} IZ : Basis USB Korpuso SWD {\`{a}} IZ : Basis DDB Korpus{\`{a}} wann und wie wurden denn die statistischen Transformationen erstellt?{\`{a}} Test der statistischen Verfahren am jeweils anderen Korpus{\`{a}} Frage: wie viele der Datens{\"{a}}tze in den beiden Korpora {\"{u}}berschneiden sich?S. 28 „Wurde der Ausgangsterm einer Transformation im Testkorpus nicht gefunden, so wurde diese Transformation nicht zur Evaluation herangezogen.“Evaluationsfragen:1. Wie gut ist die jeweilige Transformationsart absolut? {\`{a}} „Zur Beantwortung der Frage eins wurden zun{\"{a}}chst die ausgew{\"{a}}hlten Effektivit{\"{a}}tsma{\ss}e f{\"{u}}r alle zur Verf{\"{u}}gung stehenden Transformationen einer Transformationsart berechnet. Dadurch ergibt sich das f{\"{u}}r diese Versuchsanordnung exakteste Bild dieser Transformationsart.“ S. 292. Wie gut ist die jeweilige Transformationsart relativ zur Null-Transformation? {\`{a}} „Zul{\"{a}}ssig sind nur solche Transformationen, die in beiden Transformationsarten vorkommen. Da die Null-Transformation f{\"{u}}r jeden im Korpus vorkommenden Term eine Transformation liefert – n{\"{a}}mlich den identischen Ausgangsterm – ist f{\"{u}}r den Fall des Vergleichs mit der Null-Transformation nur derjenige Teil der Null-Transformation zu ber{\"{u}}cksichtigen der auch in der Vergleichstransformation vorkommt. Es werden im direkten Vergleich also nur solche Transformationen verwendet die wirklich identische Ausgangsterme haben.“ S. 29 {\`{a}} ?? {\`{a}} schaut man hier, ob die Transferverfahren f{\"{u}}r diese (eigentlich identischen Deskriptoren) andere Deskriptoren vorschlagen? Und wie gut sich das dann im Retrieval macht?3. Wie verhalten sich intellektuelle und statistische Transformationen im direkten Vergleich? {\`{a}} „Zur Beantwortung der Frage drei ist ein direkter Vergleich zwischen intellektuellen und statistischen Transformationen n{\"{o}}tig. Parallel zum Vergleich mit der Null-Transformation gilt hier die Notwendigkeit der Identit{\"{a}}t der zu Transformierenden Ausgangsterme.“ S. 296. Ergebnisse{\`{a}} welches Suchverfahren wird eingesetzt? Boole?6.1 IZ {\`{a}} SWD6.1.1 Nulltransformation: 2651 (USB) bzw. 3811 (DDB) Transformationen (also Ausgangsdeskriptoren){\`{a}} Verteilungsdichte Term-Precision: Y-Achse = Prozentzahl der Transformationen, die diesen Wert erreichen{\`{a}} v{\"{o}}llig unklar ist die X-Achsen Aufteilung bei Term-Precision: Werte 1??6.1.2 Intellektuelle Transformationen: 2611 (USB) bzw. 3737 (DDB) Transformationen{\`{a}} woher ergeben sich eigentlich diese Zahlen?{\`{a}} die Deskriptoren, die im Korpus vorkommen? Weil CK auf das gesamte Vokabular erstellt wurde?Recall: 0.13 / 0.12Precision: 0.52 / 0.44{\`{a}} merkw{\"{u}}rdiger Recall/Precision Graph{\`{a}} wie kann denn eine Transformation Recall=0 haben, aber trotzdem Precision=1??„Achtung, der steile Anstieg im Bereich um 0 wird durch Transformationen von Randbegriffen ohne entsprechende Dokumente bei der SWD Indexierung erzeugt!“ S. 32{\`{a}} ???Aber:„Bezogen auf zum Beispiel den Kosinus Koeffizient im DDB Korpus kann der Anteil von 49{\%} bei Null-Transformationen auf eben 27.8{\%} bei intellektuellen Transformationen gesenkt werden.“ S. 33 {\`{a}} von Effektivit{\"{a}}tsma{\ss} = 0 {\`{a}} Effektivit{\"{a}}tsma{\ss}e = 0 enthalten die Transformationen, wo keine Dokumente gefunden werden„Werden zu einer Transformation keine Dokumente gefunden, entsteht bei der Makromethode jedoch das Problem, dass nicht alle eingesetzten Effektivit{\"{a}}tsma{\ss}e definiert sind (wegen Division durch Null). Ein nahe liegendes Vorgehen w{\"{a}}re es nun, diese Transformationen bei der Bewertung nicht zu ber{\"{u}}cksichtigen. Da jedoch gerade die Leistungsf{\"{a}}higkeit der unterschiedlichen Transformationsarten im Ganzen betrachtet werden soll, w{\"{a}}re diese Vorgehen irref{\"{u}}hrend.“ S. 22{\`{a}} weiter S. 22 „Werden zu einer Transformation keine Dokumente gefunden, obwohl Dokumente vorhanden sind, so ist doch gerade dieser Umstand eine deutliche, wenn auch negative, Aussage. F{\"{u}}r diesen Fall fliest deshalb der Wert Null (schlechtester Wert!) in die Makroberechnung des entsprechenden Effektivit{\"{a}}tsma{\ss}es ein.“{\`{a}} sprich: in diesem Fall wurde entweder ein Deskriptor als Transformation ausgew{\"{a}}hlt, den es im Evaluationskorpus nicht gibt, oder der nicht die gleichen Dokumente retrievt wie der Ausgangsdeskriptor (ist damit eine schlechte Transformation). {\`{a}} es w{\"{a}}re toll, hier mal ein paar Beispiele zu sehen, wo die Effektivit{\"{a}}t (also {\"{A}}hnlichkeit also {\"{U}}berlappung der gefundenen Dokumentmengen) = 0 {\`{a}} Effektivit{\"{a}}t von 0 {\`{a}} gar keine {\"{u}}bereinstimmenden Dokumente. Jetzt stellt sich die Frage, wie viele Dokumente denn im Durchschnitt so pro Deskriptor verschlagwortet werden, also gefunden werden m{\"{u}}{\ss}ten. Reden wir von 10, 100, 1000? Bei kleineren Zahlen ist die fehlende {\"{U}}bereinstimmung verst{\"{a}}ndlicher.6.1.3 Statistische Transformation1525 (USB am DDB getestet), 1944 (DDB am USB getestet)Recall: 0.19 / 0.18 Precision: 0.54 / 0.44{\`{a}} mit wie vielen Deskriptoren pro Termtransformation wurde gesucht?{\`{a}} welche Art der Suche wurde eingesetzt?{\`{a}} wie wurde term-recall / term-precision Kurve generiert? Wurde Anzahl der gefundenen Dokumente festgestellt? Sonst kann man die beiden Zahlen doch gar nicht ins Verh{\"{a}}ltnis setzen. Oder jedenfalls nicht im typischen IR Sinn{\`{a}} recall / precision kurve ist eine verteilungsansicht, nicht die typische IR Kurve, bei der precision abh{\"{a}}ngig vom recall dargestellt wird!!! – denke ich jetzt zumindestS. 36 „Im direkten Vergleich von statistischen und Null-Transformationen f{\"{a}}llt besonders die enorme Reduktion von Transformationen mit Effektivit{\"{a}}tswerten von 0 auf. Bezogen auf den Kosinus Koeffizient im USB Korpus z.B. (siehe auch Abbildung XXX) konnte der Prozentsatz in den getesteten Transformationen von 38.3{\%} f{\"{u}}r Null-Transformationen auf 2.5{\%} bei statistischen Transformationen gesenkt werden.“S. 37 „Insgesamt kann f{\"{u}}r den Nutzer statistischer Transformation, wegen der Verbesserung der Effektivit{\"{a}}t von ca. 44{\%} gegen{\"{u}}ber Null-Transformationen, von einem deutlichen Mehrwert ausgegangen werden.“6.1.4 Intellektuell vs. Statistisch1923 (USB) / 1510 (DDB) S. 37 „Zun{\"{a}}chst ist zu bemerken, dass die durchschnittlichen Transformationsleistungen beider Arten sehr dicht bei einander liegen. Die statistischen haben gegen{\"{u}}ber den intellektuellen Transformationen – bezogen auf den Kosinus – einen Vorsprung von lediglich 6,7{\%} (USB) bzw. gar nur 0,32{\%} (DDB).Bei n{\"{a}}here Betrachtung zeigt sich jedoch, dass sie gr{\"{o}}{\ss}ere Unterschiede bei Term-Recall und Term-Precision aufweisen. Wie zu erwarten war, haben intellektuelle Transformationen eine leicht bessere Term-Precision (+6,1{\%} USB; +16,3{\%} DDB siehe auch Abbildung XXX). Statistische Transformationen haben daf{\"{u}}r im Gegenzug einen bessern Term-Recall (+25,5{\%} USB; +26,8{\%} DDB siehe Auch Abbildung XXX).“6.2 SWD {\`{a}} IZ 6.2.4 Intellektuell vs. StatistischS. 46 „Im Gegensatz zur Transformationsrichtung IZ {\`{a}} SWD ist jedoch eine Umkehrung der Gewichtungen zu beobachten. Sind dort intellektuelle Transformationen st{\"{a}}rker in der Term-Precision und statistische st{\"{a}}rker beim Term-Recall, zeigt sich hier genau das umgekehrte Bild. Intellektuelle Transformationen haben einen um +21{\%} (USB) bzw. +10.4{\%} (DDB) h{\"{o}}heren Term-Recall und statistische Transformationen eine um +48.2{\%} (USB) bzw. +16.6{\%} (DDB) h{\"{o}}here Term-Precision.”},
 author = {Marx, Matthias N O},
 booktitle = {unver{\"{o}}ffentlichter IZ-Arbeitsbericht},
 publisher = {IZ Sozialwissenschaften},
@@ -1761,7 +1530,6 @@ year = {1979}
 }
 @book{Nentwich2003,
 address = {Vienna},
-annote = {Review in http://informationr.net/ir/reviews/revs130.html},
 author = {Nentwich, Michael},
 isbn = {3-7001-3188-7},
 pages = {490},
@@ -1881,7 +1649,6 @@ year = {2005}
 }
 @article{Plaunt1998,
 abstract = {in this article, we describe and test a two-stage algorithm based on a lexical collocation technique which maps from the lexical clues contained in a document representation into a controlled vocabulary list of subject headings. Using a collection of 4,626 INSPEC documents, we create a "dictionary" of associations between the lexical items contained in the titles, authors, and abstracts, and controlled vocabulary subject headings assigned to those records by human indexers using a likelihood ratio statistic as the measure of association. In the deployment stage, we use the dictionary to predict which of the controlled vocabulary subject headings best describe new documents when they are presented to the system. Our evaluation of this algorithm, in which we compare the automatically assigned subject headings to the subject headings assigned to the test documents by human catalogers, shows that we can obtain results comparable to, and consistent with, human cataloging. In effect, we have cast this as a classic partial match information retrieval problem. We consider the problem to be one of "retrieving" (or assigning) the most probably "relevant" (or correct) controlled vocabulary subject headings to a document based on the clues contained in that document.},
-annote = {As the basic technique, a lexical collocation process is used. Lexical collocations are "arbitrary and recurrent word combinations" p. 890 Benson, 1990},
 author = {Plaunt, C and Norgard, B A},
 journal = {Journal of the American Society for Information Science},
 keywords = {consistency},
@@ -1973,13 +1740,6 @@ year = {1999}
 }
 @incollection{Seeger2004,
 address = {Konstanz},
-annote = {S. 183
-Dokumentation das Zentrum ihrer neuen Aufgaben: der eingeschr{\"{a}}nkte, spezielle Benutzerkreis, dessen Informationsbed{\"{u}}rfnisse dem Dokumentar bekannt waren, bildete die Voraussetzung f{\"{u}}r eine gezielte und effektive Informationsvermittlung.
-S. 187
-"Denn das Buch im heutigen Sinn ...ist eine ebenso {\"{u}}berlebte Einrichtung, wie der Bandkatalog. Das Buch ist fertig, nicht erweiterungsf{\"{a}}hig, deshalb schon veraltet kurz nachdem es erschienen ist. Das Buch der Zukunft ist auf einzelnen abtrennbaren Bl{\"{a}}ttern gedruckt, die beliebig zusammengef{\"{u}}gt und durch Einschaltung auf dem laufenden gehalten werden k{\"{o}}nnen. Anstatt eines Konversationslexikons in so und so vielen B{\"{a}}nden wird man in Zukunft einen Saal haben, in dem in Dossiers und auf Zetteln die Originalnotizen {\"{u}}ber jeden Gegenstand vereinigt sind." [Schwenke 1978: 366]
-S. 192
-Eine umfassende Informationsbehausung aus B{\"{u}}chern, Dokumenten, Nachweisen, Objekten und sich st{\"{a}}ndig aktualisierenden Wissensspeichern in multimedialer Informationsdarstellung, zugreifbar in kleinen, {\"{u}}berschaubaren (durch die Klassifikation) vorgegebenen “Informationsportionen”, zu konsumieren in angenehmster baulicher Umgebung oder vervielf{\"{a}}ltigt nach Hause mitzunehmen. Dies alles legt die ideologischen und kulturellen Hintergr{\"{u}}nde der Promotoren offen, die diese (und auch andere, hier nicht angesprochene) Projektionen nicht nur gedacht, sondern auch (soweit wie m{\"{o}}glich) realisiert haben:
-Eine {\"{u}}ber ein institutionelles Netzwerk zu organisierende zentralistische Konzeption f{\"{u}}r das permanente Zusammenf{\"{u}}gen des Weltwissens zu einem Weltged{\"{a}}chnis, offenbar getragen durch den Glauben an die Einheit der Wissenschaft, gepaart mit einer positivistischen {\"{U}}berzeugung von der Wertfreiheit wissenschaftlicher Erkenntnisse, auf dem Boden einer pragmatisch-optimistischen Weltsicht. Vielleicht nicht ganz zu Unrecht kann man in diesem Gesamtkonzept einen gewissen Hang zum Monumentalismus erkennen. Aber wer w{\"{u}}rde schon so kleinm{\"{u}}tig sein wollen?},
 author = {Seeger, Thomas},
 booktitle = {Wissen in Aktion. Der Primat der Pragmatik als Motto der Konstanzer Informationswissenschaft. Festschrift f{\"{u}}r Rainer Kuhlen},
 editor = {Hammw{\"{o}}hner, Rainer and Rittberger, Marc and Semar, Wolfgang},
@@ -2054,7 +1814,6 @@ year = {2007}
 }
 @article{Summann2004,
 abstract = {This article describes the journey from the conception of and vision for a modern search-engine-based search environment to its technological realisation. In doing so, it takes up the thread of an earlier article on this subject, this time from a technical viewpoint. As well as presenting the conceptual considerations of the initial stages, this article will principally elucidate the technological aspects of this journey. The front-end handles the tasks of providing the search environment, results analysis and presentation, and at the moment it is running on a Linux PC with 2 processors under SUSE 9.0. Connection to the web is established using PHP 4 on an Apache Web Server. The back-end deals with the areas of data loading, pre-processing and data conversion, data assimilation, crawling and document processing and indexing. ... For the back-end, the main development emphasis will be the automation and configurability of the harvesting and pre-processing of the documents, in particular to come to grips with the problems we experienced with OAI harvesting that we mentioned earlier in this article. The improvement of search results (ranking, boosting, linguistic methods) must undergo fine tuning from the point of view of academic use. Improving performance is another important goal. Since we want the search engine to be able to provide basic services using external systems and portals, we plan to implement standard interfaces (Z39.50, OAI, SOAP). For collaboration with other systems, we plan to activate features enabling distributed search and connection with external indexes.},
-annote = {... The technical structure of the FAST search engine is modular and transparent in construction and includes the standalone system components of a back-end and a front-end server. At the moment, Bielefeld is running one front-end server, but it could easily run more. Likewise the number of back-end servers is scaleable, and both areas can be rebuilt to create a multi-node system without creating any problems. ...},
 author = {Summann, Friedrich and Lossau, Norbert},
 journal = {D-Lib Magazine},
 number = {9},
@@ -2065,9 +1824,6 @@ year = {2004}
 }
 @book{Svenonius2000,
 address = {Cambridge, Mass.},
-annote = {Umst{\"{a}}tter: S. 94
-Werke, Ausgaben oder Themen als Variablen einer bibliographischen Theorie, in der die "entities" das bibliographische Universum bev{\"{o}}lkern.
-- anspruchsvoll formulierte Wiedergabe einer Verzeichnungspraxis},
 author = {Svenonius, Elaine},
 booktitle = {Digital libraries and electronic publishing},
 isbn = {0262194333 (hc alk. paper)},
@@ -2095,16 +1851,6 @@ year = {1999}
 }
 @book{Taylor1999,
 address = {Englewood, Colo.},
-annote = {Libraries: longest tradition of o. i.; physical entities have to be arranged in some fashion;
-arranged by classification; doing authority work (names, titles), Subject analysis;
-Normally records physically held by the library (newer approach catalog gatesways
-S.78
-A surrogate record serves as a filter to keep a user from having
-S.103
-access points (consistently expressed): names, titles, name/title combination
-S. 151
-Kinds of controlled Vocabularies ...
-certain differences: thesauri are narrow in scope (one specific subject area) ; more likely to be multilingual ({\"{u}}bersetzbare Terme)},
 author = {Taylor, Arlene G},
 booktitle = {Library and information science text series},
 keywords = {Information organization.,Metadata.},
@@ -2238,12 +1984,6 @@ year = {2003}
 }
 @incollection{Umstatter1999,
 address = {Bielefeld},
-annote = {Interdisziplinarit{\"{a}}t hat drei Aspekte:
-I. Den Aspekt f{\"{u}}r den einzelnen Wissenschaftler, der f{\"{u}}r sich ein Optimum zwischen seiner Spezialisierung und seiner wissenschaftlichen Allgemeinbildung sucht. Hier zeigt sich eine interessante Ausgewogenheit bei der Nutzung von Zeitschriften. W{\"{a}}hrend in einer Universit{\"{a}}tsbibliothek fast jeder Wissenschaftler ein Kerngebiet hat, mit dem er sich fast allein besch{\"{a}}ftigt, bem{\"{u}}ht er sich gleichzeitig Zeitschriften zu {\"{u}}berwachen, die er mit seinen Fachkollegen teilt. So stehen beispielsweise f{\"{u}}r den einzelnen Naturwissenschaftler die Spitzenzeitschriften Nature und Science nur an 10ter oder 20ter Stelle, w{\"{a}}hrend seine jeweilige Spezialzeitschrift au{\ss}er ihm selbst kaum jemand in der jeweiligen Universit{\"{a}}t liest (Abb. 3) (Umst{\"{a}}tter, W. und Rehm, M. 1984). 
-
-II. Den Aspekt f{\"{u}}r das wissenschaftliche Team, das beim Wechsel von der "Little Science" zur "Big Science" in zunehmender Koautorschaft arbeitet, was nach Parthey deutlich mit Interdisziplinarit{\"{a}}t korreliert. Siehe dazu auch Abb. 1. 
-
-III. Den Aspekt f{\"{u}}r die gesamte Wissenschaft, in der sich die einzelnen Themen entsprechend dem "Bradford's law of scattering" jeweils {\"{u}}ber das gesamte Zeitschriftenspektrum verteilen. Vergleichbares gilt sicher auch f{\"{u}}r B{\"{u}}cher, in denen eine thematische Dispersion allerdings schwerer bestimmbar ist.},
 author = {Umst{\"{a}}tter, Walther},
 booktitle = {Interdisziplinarit{\"{a}}t - Herausforderung an die Wissenschaftlerinnen und Wissenschaftler},
 editor = {Umst{\"{a}}tter, W and Wessel, K.-F},
@@ -2394,14 +2134,6 @@ volume = {5},
 year = {1981}
 }
 @article{White2007a,
-annote = {S. 595
-types of relevance
-...citers tell us more about relevance...
-S. 597
-easiest is topical relevance ...
-"subjectivity" of relevance
-s. 600
-bibliometric rankings ... may be seen as attempts to produce cognitive effects on the user side.},
 author = {White, Howard D},
 journal = {JASIST},
 number = {4},
@@ -2412,7 +2144,6 @@ year = {2007}
 }
 @incollection{White2005,
 address = {Stockholm, Sweden},
-annote = {http://en.wikipedia.org/wiki/Bibliogram},
 author = {White, Howard D},
 booktitle = {Proceedings of the 10th International Conference of the International Society for Scientometrics and Informetrics},
 number = {4},
